@@ -35,6 +35,8 @@ pipeline {
    post {
      success {
        echo 'Build SUCCESasasdS'
+       echo 'SEND REQUEST !'
+       curl -X GET https://jsonplaceholder.typicode.com/todos/1
      }
    }
   
