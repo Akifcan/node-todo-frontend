@@ -22,7 +22,14 @@ pipeline {
       steps {
          bat 'npm test'
       }
-    }      
+    }
+    
+    stage('CURL') {
+      steps {
+        bat 'curl --version'
+      }
+    }
+    
   }
   
    post {
