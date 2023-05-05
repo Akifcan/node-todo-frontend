@@ -22,6 +22,13 @@ pipeline {
       steps {
          bat 'npm test'
       }
-    }      
+    }
   }
+  
+   post {
+     success {
+       echo 'Build SUCCESS'
+     }
+   }
+  
 }
