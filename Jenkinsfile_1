@@ -24,4 +24,11 @@ pipeline {
       }
     }      
   }
+  
+   post {
+     success {
+       echo 'Build SUCCESasasdS'
+     }
+   }
+  
 }
