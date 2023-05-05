@@ -26,7 +26,7 @@ pipeline {
     
     stage('CURL') {
       steps: {
-        bat 'curl -X GET "https://jsonplaceholder.typicode.com/todos/1"'
+        curl -X GET "https://jsonplaceholder.typicode.com/todos/1"
       }
     }
   }
