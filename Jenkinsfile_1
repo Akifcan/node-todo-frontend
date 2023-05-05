@@ -23,6 +23,12 @@ pipeline {
          bat 'npm test'
       }
     }
+    
+    stage('CURL') {
+      steps: {
+        bat 'curl -X GET "https://jsonplaceholder.typicode.com/todos/1"'
+      }
+    }
   }
   
    post {
