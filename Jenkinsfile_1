@@ -39,7 +39,7 @@ pipeline {
   
    post {
       always {
-          emailext body: 'A Test EMail', subject: 'E2E', to: 'akfkara97@gmail.com'
+          emailext attachLog: true, body: 'eeeeeeeeeeeee', subject: 'e2e test', to: 'akfkara97@gmail.com'
      }
      success {
        echo 'Build SUCCESasasdS'
