@@ -39,7 +39,9 @@ pipeline {
   
    post {
       always {
-        emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+        emailext body: 'A Test EMail',
+        to: 'akfkara97@gmail.com',
+        subject: 'Test'
      }
      success {
        echo 'Build SUCCESasasdS'
