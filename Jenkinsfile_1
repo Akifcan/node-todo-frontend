@@ -40,6 +40,7 @@ pipeline {
    post {
       always {
         emailext (
+          from: 'akfkara97@gmail.com',
           to: 'akfkara97@gmail.com',
           subject: 'hi',
           body: 'hello'
