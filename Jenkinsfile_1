@@ -8,36 +8,29 @@ pipeline {
         
     stage('Cloning Git') {
       steps {
-        catchError {
-          bat './gradlew compileJava --stacktrace'
-        }
         git 'https://github.com/Akifcan/node-todo-frontend'
+      }
+      post {
+        success {
+          echo 'OKKK'
+        }
       }
     }
         
     stage('Install dependencies') {
       steps {
-        catchError {
-          bat './gradlew compileJava --stacktrace'
-        }
         bat 'npm install'
       }
     }
      
     stage('Test') {
       steps {
-          catchError {
-           bat './gradlew compileJava --stacktrace'
-          }
          bat 'npm test'
       }
     }
     
     stage('CURL') {
       steps {
-        catchError {
-          bat './gradlew compileJava --stacktrace'
-        }
         bat 'curl --version'
       }
     }
