@@ -48,6 +48,7 @@ pipeline {
      }
      failure {
       echo 'FAILED!!!!'
+      emailext attachLog: true, body: 'e2e failed', subject: 'e2e test result:fail', to: 'akfkara97@gmail.com'
      }
    }
   
